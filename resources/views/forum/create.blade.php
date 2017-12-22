@@ -81,7 +81,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 " role="main">
-                        {!! Form::open(['url'=>'/showfind']) !!}
+                        {!! Form::open(['url'=>'/discussions/store']) !!}
                         @include('forum.form')
                         <div>
                             <!--- Sub  Field --->

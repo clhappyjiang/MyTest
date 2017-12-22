@@ -5,6 +5,7 @@ Route::get('/','PostsController@index');
 Route::resource('discussions','PostsController');
 
 Route::get('/discussions/create','PostsController@create');
+
 Route::post('/discussions/store','PostsController@store');
 Route::post('/discussions/{{$discussion->id}}/edit','PostsController@update');
 

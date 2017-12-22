@@ -122,12 +122,12 @@
             </div>
             <!---  Field --->
             <div class="form-group">
-                {!! Form::label('password','密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')!!}
+                {!! Form::label('password','密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')!!}<br>
                 {!! Form::password('password',null,['class'=>'form-control'])!!}
             </div>
             <!---  Field --->
             <div class="form-group">
-                {!! Form::label('password_confirmation','确认密码:')!!}
+                {!! Form::label('password_confirmation','确认密码:')!!}<br>
                 {!! Form::password('password_confirmation',null,['class'=>'form-control'])!!}
             </div>
             <!--- Sub  Field --->

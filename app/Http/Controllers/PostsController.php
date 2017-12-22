@@ -6,6 +6,7 @@ use App\Discussion;
 use App\Http\Requests\StoreBlogPostRequest;
 use App\Markdown\Markdown;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
@@ -21,6 +22,7 @@ class PostsController extends Controller
 
     public function index()
     {
+//        $discussions = Discussion::all();
         $discussions = Discussion::all();
         return view('forum.index',compact('discussions'));
     }
