@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">新闻发布系统</a>
+                <a class="navbar-brand" href="/">苏州科技大学校友录数据系统</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -47,12 +47,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if(Auth::check())
                         <li><a href="#">{{ Auth::user()->name }}</a></li>
-                        <li><a href="/discussions/create">发布新闻</a></li>
-                        <li><a href="/find">搜索新闻</a></li>
+                        <li><a href="/discussions/create">校友信息注册</a></li>
+                        <li><a href="/find">搜索校友</a></li>
                         <li><a href="/logout">退出登录</a></li>
                     @else
-                        <li><a href="/admin">管理员登录</a></li>
-                        <li><a href="/user/login">普通用户登录</a></li>
+                        {{--<li><a href="/admin">管理员登录</a></li>--}}
+                        <li><a href="/user/login">登 录</a></li>
                         <li><a href="/user/register">注 册</a></li>
                     @endif
                 </ul>
@@ -91,7 +91,49 @@
     <div class="row">
         <div  role="main">
             <div class="blog-post">
-                {!! $html !!}
+                <table class="table table-striped table-bordered table-hover" >
+                    <thead>
+                    <tr>
+                        <th colspan="4">工作地点</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="4">{{$discussion->title}}</td>
+
+                    </tr>
+                    <thead>
+                    <thead>
+                    <tr>
+                        <td  colspan="4">工作地址</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="4">{!! $html !!} </td>
+
+                    </tr>
+                    <thead>
+
+
+                    <tr>
+                        <th>联系方式</th>
+                        <td>校友邮编</td>
+                        <td>校友</td>
+                        <td>校友邮箱</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{$discussion->tel}}</td>
+                        <td>{{$discussion->post}} </td>
+                        <td>{{$discussion->qq}}</td>
+                        <td>{{$discussion->user->email}}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

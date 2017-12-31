@@ -17,6 +17,7 @@ Route::post('/user/login','UsersController@signin');
 Route::get('/logout','UsersController@logout');
 Route::get('/find','PostsController@find');
 Route::post('/showfind','PostsController@showfind');
+Route::get('/profile','PostsController@profile');
 
 Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);
 

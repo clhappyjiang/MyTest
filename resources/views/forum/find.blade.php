@@ -77,9 +77,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if(Auth::check())
-                        <li><a href="#">{{ Auth::user()->name }}</a></li>
-                        <li><a href="/discussions/create">发布新闻</a></li>
-                        <li><a href="/find">搜索新闻</a></li>
+                        <li><a href="/admin">{{ Auth::user()->name }}</a></li>
+                        <li><a href="/discussions/create">校友信息注册</a></li>
+                        <li><a href="/find">搜索校友</a></li>
                         <li><a href="/logout">退出登录</a></li>
                     @else
                         <li><a href="/admin">管理员登录</a></li>
@@ -103,7 +103,7 @@
                         {!! Form::open(['url'=>'/showfind']) !!}
 
                         <div class="form-group">
-                            {!! Form::label('id','新闻编号:')!!}
+                            {!! Form::label('id','校友 id:')!!}
                             {!! Form::text('id',null,['class'=>'form-control'])!!}
                         </div>
 

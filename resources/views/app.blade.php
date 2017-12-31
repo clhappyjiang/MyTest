@@ -35,14 +35,14 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())
-                <li><a href="#">{{ Auth::user()->name }}</a></li>
-                <li><a href="/discussions/create">发布新闻</a></li>
-                    <li><a href="/find">搜索新闻</a></li>
+                <li><a href="/admin">{{ Auth::user()->name }}</a></li>
 
-                    <li><a href="/logout">退出登录</a></li>
+                <li><a href="/discussions/create">校友信息注册</a></li>
+                <li><a href="/find">搜索校友</a></li>
+                <li><a href="/logout">退出登录</a></li>
                 @else
-                <li><a href="/admin">管理员登录</a></li>
-                <li><a href="/user/login">普通用户登录</a></li>
+                {{--<li><a href="/admin">管理员登录</a></li>--}}
+                <li><a href="/user/login">登 录</a></li>
                 <li><a href="/user/register">注 册</a></li>
                 @endif
             </ul>
@@ -84,14 +84,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8 text-center">
-                        <h2>苏州科技大学新闻发布系统</h2>
+                        <h2>苏州科技大学校友录数据管理系统</h2>
                     </div>
                 </div>
 
             </div>
         </div> <!-- .site-banner -->
     </div> <!-- .site-top -->
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+
     <!-- MAIN POSTS -->
     <div class="main-posts">
         <div class="container">
@@ -99,30 +99,32 @@
                 <div class="blog-masonry masonry-true">
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/1.jpg" alt="">
+                            <img src="images/01.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">一月内宣布三笔“新零售”投资：朱啸虎自曝投资逻辑</a></h4>
+                                <h4><a href="#">优秀校友 段毅</a><div class="pull-right">房多多创始人兼CEO</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">25 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/2.jpg" alt="">
+                            <img src="images/02.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">官媒：共享单车押金应由第三方存管 降低被挪用风险</a></h4>
+                                <h4><a href="#">优秀校友 曾熙</a><div class="pull-right">房多多创始人兼COO</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">24 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -130,15 +132,16 @@
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/3.jpg" alt="">
+                            <img src="images/03.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">“2017年中国经济潮流人物”榜单将于12月8日公布</a></h4>
+                                <h4><a href="#">优秀校友 郑国</a><div class="pull-right">崇山科技董事长</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">23 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -146,15 +149,16 @@
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/4.jpg" alt="">
+                            <img src="images/04.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">共享单车各派拒绝停战，新一轮融资把战火燃向大出行</a></h4>
+                                <h4><a href="#">优秀校友 周锡元</a><div class="pull-right">中科院院士</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">22 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -162,75 +166,80 @@
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/5.jpg" alt="">
+                            <img src="images/05.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">新加坡共享单车Obike遭黑客入侵 大量用户信息被泄露</a></h4>
+                                <h4><a href="#">优秀校友 叶可明</a><div class="pull-right">中国工程院院士</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">21 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/6.jpg" alt="">
+                            <img src="images/06.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">余额宝单日申购额度调整为2万 超过98%用户不受影响</a></h4>
+                                <h4><a href="#">优秀校友 王开忠</a><div class="pull-right">中宣部宣教部副局长</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">20 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/7.jpg" alt="">
+                            <img src="images/07.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">库克：每次来中国都得到很多能量 中国的变化太大了</a></h4>
+                                <h4><a href="#">优秀校友 余新忠</a><div class="pull-right">南开大学博士生导师</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">15 Jan 2017</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/8.jpg" alt="">
+                            <img src="images/08.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">乌镇物联网大会</a></h4>
+                                <h4><a href="#">优秀校友 滔吴</a><div class="pull-right">中山大学历史教授</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">14 Jan 2084</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- /.post-masonry -->
                     <div class="post-masonry col-md-4 col-sm-6">
                         <div class="post-thumb">
-                            <img src="images/9.jpg" alt="">
+                            <img src="images/09.png" alt="">
                             <div class="title-over">
-                                <h4><a href="#">徐小平曝某投资人胁迫创业者接受低价 称是黑恶势力</a></h4>
+                                <h4><a href="#">优秀校友 朱兴良</a><div class="pull-right">金螳螂控股公司董事长</div></h4>
                             </div>
                             <div class="post-hover text-center">
                                 <div class="inside">
                                     <i class="fa fa-plus"></i>
-                                    <span class="date">13 Jan 2084</span>
-                                    <h4><a href="#">登录查看新闻详情</a></h4>
+                                    <span class="date">苏州科技大学毕业</span>
+
+                                    <h4><a href="#">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>

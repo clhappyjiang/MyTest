@@ -74,4 +74,9 @@ class PostsController extends Controller
         $html = $this->markdown->markdown($discussion->body);
         return view('forum.showfind',compact('discussion','html'));
     }
+
+    public function profile()
+    {
+        return view('forum.profile');
+    }
 }

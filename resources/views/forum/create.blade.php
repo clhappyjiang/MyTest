@@ -86,7 +86,7 @@
                         <div>
                             <!--- Sub  Field --->
                             <div class="form-group">
-                                {!! Form::submit('发表',['class'=>'btn btn-primary pull-right'])!!}
+                                {!! Form::submit('注册校友信息',['class'=>'btn btn-primary pull-right'])!!}
                             </div>
                         </div>
                         {!! Form::close() !!}

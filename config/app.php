@@ -171,7 +171,7 @@ return [
         TCG\Voyager\VoyagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Naux\Mail\SendCloudServiceProvider::class,
-
+        Naux\Mail\SendCloudServiceProvider::class,
 
         /*
          * Application Service Providers...

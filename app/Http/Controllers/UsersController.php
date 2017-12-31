@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Mail;
 use Hyancat\Sendcloud\SendCloudFacade as SendCloud;
+use Naux\Mail\SendCloudTemplate;
+
 
 class UsersController extends Controller
 {
@@ -22,18 +24,36 @@ class UsersController extends Controller
         //保存用户，重定向
         $data = [
             'confirm_code'=>str_random(48),
-            'avatar'=>'/images/default-avatar.png'
+            'avatar'=>'/images/default-avatar.png',
+
         ];
         $user = User::create(array_merge($request->all(),$data));
         //send email
         //subject view confirm_code email
-        $subject = 'Confirm you email';
-        $view = 'email.register';
-
-        $this->sendTo($user,$subject,$view,$data);
+//        $subject = 'Confirm you email';
+//        $view = 'email.register';
+//
+//        $this->sendTo($user,$subject,$view,$data);
+        $this->sendVerifyEmailTo($user);
         return redirect('/');
     }
 
+    public function sendVerifyEmailTo($user)
+    {
+        // 模板变量
+        $data = ['url' => 'http://127.0.0.1:8000/user/login',
+                 'name' => $user->name
+        ];
+        $template = new SendCloudTemplate('register', $data);
+
+        Mail::raw($template, function ($message) use ($user){
+            $message->from('jts0816@126.com', '苏州科技大学校友录系统');
+
+            $message->to($user->email);
+        });
+        
+    }    
+    
     public function confirmEmail($confirm_code)
     {
         $user = User::where('confirm_code',$confirm_code)->first();
