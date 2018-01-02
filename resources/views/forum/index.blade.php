@@ -30,6 +30,13 @@
                 @endforeach
             </div>
         </div>
+        <div class="container col-md-3">
+            @foreach ($discussions as $discussion)
+
+            @endforeach
+        </div>
+
+        {{ $discussions->links() }}
     </div>
 @stop
 

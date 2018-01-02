@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
 </head>
-<body >
+<body class="back" >
 <nav class="navbar  navbar-inverse navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header ">
@@ -35,11 +36,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())
-                <li><a href="/admin">{{ Auth::user()->name }}</a></li>
-
+                <li><a href="/admin">校友：{{ Auth::user()->name }} 你好！</a></li>
+                <li><a href="http://127.0.0.1:8000/admin/users/47">查看校友个人信息</a></li>
                 <li><a href="/discussions/create">校友信息注册</a></li>
                 <li><a href="/find">搜索校友</a></li>
                 <li><a href="/logout">退出登录</a></li>
+
                 @else
                 {{--<li><a href="/admin">管理员登录</a></li>--}}
                 <li><a href="/user/login">登 录</a></li>
@@ -108,7 +110,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +126,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -141,7 +143,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -158,7 +160,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
 
                                 </div>
                             </div>
@@ -175,7 +177,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +193,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +209,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +225,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +241,7 @@
                                     <i class="fa fa-plus"></i>
                                     <span class="date">苏州科技大学毕业</span>
 
-                                    <h4><a href="#">登录查看详情信息</a></h4>
+                                    <h4><a href="http://127.0.0.1:8000/user/login">登录查看详情信息</a></h4>
                                 </div>
                             </div>
                         </div>

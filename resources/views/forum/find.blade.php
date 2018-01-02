@@ -103,7 +103,7 @@
                         {!! Form::open(['url'=>'/showfind']) !!}
 
                         <div class="form-group">
-                            {!! Form::label('id','校友 id:')!!}
+                            {!! Form::label('id','您想要搜索的校友名称:')!!}
                             {!! Form::text('id',null,['class'=>'form-control'])!!}
                         </div>
 

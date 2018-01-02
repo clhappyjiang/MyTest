@@ -7,6 +7,7 @@ use App\Http\Requests\StoreBlogPostRequest;
 use App\Markdown\Markdown;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\User;
 
 class PostsController extends Controller
 {
@@ -22,9 +23,12 @@ class PostsController extends Controller
 
     public function index()
     {
-//        $discussions = Discussion::all();
-        $discussions = Discussion::all();
+//        $discussions = Discussion::all();latest
+//        $discussions = Discussion::latest()->get();
+        $discussions = Discussion::latest()->paginate(7);
         return view('forum.index',compact('discussions'));
+//        $discussions = DB::table('$discussions')->paginate(15);
+//        return view('user.index', ['$discussions' => $discussions]);
     }
 
     public function show($id)
@@ -70,13 +74,31 @@ class PostsController extends Controller
 
     public function showfind(Request $request)
     {
-        $discussion = Discussion::findOrFail($request->id);
+//        $discussion = Discussion::findOrFail($request->id);
+//        $html = $this->markdown->markdown($discussion->body);
+//        return view('forum.showfind',compact('discussion','html'));
+        $findname = $request->id;
+        $user = User::where('name',$findname)->first();
+//        $username =$user->name;
+        if (!empty($user)){
+        $userid = $user->id;
+        $discussion = Discussion::where('user_id',$userid)->first();
+
+//        echo $discussion->title;
         $html = $this->markdown->markdown($discussion->body);
+
         return view('forum.showfind',compact('discussion','html'));
+        }else{
+             return view('forum.findfailed');
+        }
+
     }
 
     public function profile()
     {
-        return view('forum.profile');
+
+        $discussion = Discussion::findOrFail(20);
+        $html = $this->markdown->markdown($discussion->body);
+        return view('forum.profile',compact('discussion','html'));
     }
 }

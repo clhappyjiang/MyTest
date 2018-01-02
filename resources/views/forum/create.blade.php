@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">新闻发布系统</a>
+                <a class="navbar-brand" href="/">校友录入系统</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -58,9 +58,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if(Auth::check())
-                        <li><a href="#">{{ Auth::user()->name }}</a></li>
-                        <li><a href="/discussions/create">发布新闻</a></li>
-                        <li><a href="/find">搜索新闻</a></li>
+                        <li><a href="/admin">{{ Auth::user()->name }}</a></li>
+                        <li><a href="/discussions/create">发布通信录</a></li>
+                        <li><a href="/find">搜索校友</a></li>
                         <li><a href="/logout">退出登录</a></li>
                     @else
                         <li><a href="/admin">管理员登录</a></li>
@@ -86,7 +86,7 @@
                         <div>
                             <!--- Sub  Field --->
                             <div class="form-group">
-                                {!! Form::submit('注册校友信息',['class'=>'btn btn-primary pull-right'])!!}
+                                {!! Form::submit('发布通信录信息',['class'=>'btn btn-primary pull-right'])!!}
                             </div>
                         </div>
                         {!! Form::close() !!}

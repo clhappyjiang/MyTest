@@ -112,7 +112,7 @@
         {!!Form::open(array('url'=>'/user/register'))!!}
         <!---  Name Field--->
             <div class="form-group">
-                {!! Form::label('name','用户名:')!!}
+                {!! Form::label('name','校友名:')!!}
                 {!! Form::text('name',null,['class'=>'form-control'])!!}
             </div>
             <!--- Email Field --->

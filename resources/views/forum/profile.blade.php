@@ -53,19 +53,9 @@
     <link  rel="stylesheet"  href="css/bootstrap.css">
     <link  rel="stylesheet"  href="css/style.css">
 
-    <style>
-        .back{
-            background-image: url(/images/bg.png);
-            background-repeat:repeat-x  ;
-            margin-bottom: 0px;
-            margin-top: 0px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-    </style>
 </head>
 <body >
-<div class="back">
+<div >
 
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -97,12 +87,33 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+    <div class="container col-md-10 col-md-offset-2">
+    <div class="jumbotron col-md-9 "  >
+        <div class="container">
+            <div class="media-left">
+                <a href="#">
+                    <img src="{{$discussion->user->avatar}}" class="media-object img-circle"
+                         alt="64*64" style="width: 64px;height: 64px">
+                </a>
 
-    <div class="container">
-        <div class="jumbotron col-md-4 col-md-offset-4" style="margin-top: 100px;margin-bottom: 300px">
+            </div>
 
-            <div class="row">
-                <div  role="main">
+            <div class="media-body">
+                <h4 >校友姓名：{{$discussion->user->name}}<a  href="/discussions/{{$discussion->id}}/edit" >
+                    </a></h4>
+                毕业时间：{{$discussion->user->graduate}} &nbsp;&nbsp;&nbsp;&nbsp;
+                所属院系：{{$discussion->user->college}}
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="col-md-9"   >
+        <div class="row">
+            <div class="col-md-13" role="main">
+                <div class="blog-post">
 
                     <table class="table table-striped table-bordered table-hover" >
                         <thead>
@@ -112,7 +123,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td colspan="4">{{$user->id}}</td>
+                            <td colspan="4">{{$discussion->title}}</td>
 
                         </tr>
                         <thead>
@@ -123,7 +134,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td colspan="4"> </td>
+                            <td colspan="4">{!! $html !!} </td>
 
                         </tr>
                         <thead>
@@ -132,25 +143,30 @@
                         <tr>
                             <th>联系方式</th>
                             <td>校友邮编</td>
-                            <td>校友</td>
+                            <td>QQ号</td>
                             <td>校友邮箱</td>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            {{--<td>{{$discussion->tel}}</td>--}}
-                            {{--<td>{{$discussion->post}} </td>--}}
-                            {{--<td>{{$discussion->qq}}</td>--}}
-                            {{--<td>{{$discussion->user->email}}</td>--}}
+                            <td>{{$discussion->tel}}</td>
+                            <td>{{$discussion->post}} </td>
+                            <td>{{$discussion->qq}}</td>
+                            <td>{{$discussion->user->email}}</td>
                         </tr>
 
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
+
+                </div>
+
+            </div>
+
+        </div>
+
+</div>
+    </div>
 </div>
 </body>
 </html>

@@ -9,11 +9,13 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "germey/geetest": "^3.0",
         "guzzlehttp/guzzle": "~5.3|^6.3",
         "hyancat/sendcloud": "^0.3.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
+        "laravist/geecaptcha": "^1.1",
         "naux/sendcloud": "^1.1",
         "tcg/voyager": "^1.0"
     },

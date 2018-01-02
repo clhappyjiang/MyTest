@@ -107,21 +107,44 @@
 
         {!!Form::open(array('url'=>'/user/login'))!!}
         <!--- Email Field --->
-            <div class="form-group">
+            <div class="form-group col-md-10">
                 {!! Form::label('email','邮箱:')!!}
                 {!! Form::email('email',null,['class'=>'form-control'])!!}
             </div>
             <!---  Field --->
-            <div class="form-group">
+            <div class="form-group col-md-8">
                 {!! Form::label('password','密码:')!!}
                 {!! Form::password('password',null,['class'=>'form-control'])!!}
             </div>
+
             <!--- Sub  Field --->
+            <div class="col-md-4 col-md-offset-1 ">
+            <div class="">
+                {!! Form::submit('登 录',['class'=>'btn btn-success form-control'])!!}
+            </div>
+            </div>
+                <div class="col-md-4 col-md-offset-1">
             <div class="form-group">
-                {!! Form::submit('马上登录',['class'=>'btn btn-success form-control'])!!}
+                <a href="/user/register"><button type="button" class="btn btn btn-info">注      &nbsp&nbsp&nbsp册</button></a>
+            </div>
             </div>
 
+
             {!!Form::close()!!}
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-8">
+
             @if($errors->any())
                 <ul class="list-group">
                     @foreach($errors->all() as $error)
@@ -134,9 +157,16 @@
                     {{Session::get('user_login_failed')}}
                 </div>
             @endif
+            </div>
+
         </div>
     </div>
+    <div  style="margin-left:-20px">
+        {!! Geetest::render() !!}
+
     </div>
+    </div>
+
 </div>
 
 </div>
